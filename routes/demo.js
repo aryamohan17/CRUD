@@ -7,7 +7,7 @@ router.post('/insert_data',cntrl.insert_value,function (req,res,next) {
     if(res.locals.result == 'err' )
      {
          var status = {'status' : false,'message' :"Something went wrong",result: [] }
-             res.status(202).json(status);
+             res.status(402).json(status);
      }
      else if(res.locals.result.length == 0){
          var status = {'status' : true,'message' :"No result Found",result: [] }
