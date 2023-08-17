@@ -6,7 +6,6 @@ async function insert_value(req, res, next) {
     next()
 }
 
-
 async function update_value(req, res, next) {
     // var id = req.params.id
     var id = req.query.id

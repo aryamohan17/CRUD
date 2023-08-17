@@ -4,6 +4,7 @@ var mysql_conn = require('../database').connection
 async function insert_demo(names,address,phonenumber) {
     const insert_s = 'INSERT INTO `insert_data`( `name`, `address`, `phonenumber`) VALUES (?,?,?)';
     var result = await mysql_conn.query(insert_s,[names,address,phonenumber])
+    // console.log(result[0]);
     if(result[0].length != 0){
         return result[0];
     }else{
@@ -43,4 +44,6 @@ async function delete_one(id) {
         return []
     }
 }
+// sum of marks
+
 module.exports={insert_demo,update_data,select_all,delete_one}
